@@ -19,12 +19,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject mapMenu;
     public bool map;
     public string[] viewedPads;
+    public GameObject datapadSlots;
+
+    public GameObject[] datapadIcons;
 
     public AudioMixer mixer;
      
     public Transform inventory;
     public Transform inventorySelect;
     public Button[] buttons;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -167,6 +172,12 @@ public class PauseMenu : MonoBehaviour
             else
                 inventory.GetChild(6).GetChild(i).gameObject.SetActive(false);
         }
+    }
+
+    public void DatapadViewed(int datapad, string line){
+        viewedPads[datapad] = line;
+        datapadSlots.SetActive(true);
+        datapadIcons[datapad].SetActive(true);
     }
 
     public void NextLevel()

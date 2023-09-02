@@ -35,6 +35,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
+        
         //defualtMoveSpeed = movementSpeed;
     }
 

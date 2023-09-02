@@ -22,7 +22,8 @@ public class Datapad : MonoBehaviour
     public void OpenDatapad()
     {
 
-        if(id < 12) GameObject.Find("Level GUI").GetComponent<PauseMenu>().viewedPads[id] = line1;
+        if(id < 12) 
+            GameObject.Find("Level GUI").GetComponent<PauseMenu>().DatapadViewed(id, line1);
         screen.hit = null;
         if(hit != null && first)
         {

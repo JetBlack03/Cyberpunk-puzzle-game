@@ -49,7 +49,6 @@ public class dialogue : MonoBehaviour
         if (diologBox.active == false && hasReset == true)
         {
             textDisplay.text = "";
-            print("lets gooooo");
             early = false;
 
             diologBox.SetActive(true);
